@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 import Questao01.Aluno;
 
 public class App {
+    public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
         System.out.println("Escolha a questão que você deseja executar: "
         + "\n 1 - Questão 01"
@@ -15,8 +18,12 @@ public class App {
         + "\n 10 - Questão 10"
         + "\n 12 - Questão 12"
         + "\n 13 - Questão 13"
+        + "\n Digite a opção desejada: "
         );
 
-        Aluno.add();
+        int quest = input.nextInt();
+        if (quest == 1) {
+            Aluno.add();
+        }
     }
 }
